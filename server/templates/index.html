@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Recognization</title>
+</head>
+<body>
+    <h2>Show an Image</h2>
+    
+    {% if image_exists %}
+        <img src="{{ url_for('show_image') }}" alt="Example Image">
+    {% else %}
+        <p>No unprocessed image.</p>
+    {% endif %}
+    
+    <h2>Add a Person</h2>
+
+    <form method="POST" action="/add_person">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Add Person</button>
+    </form>
+
+    <button onclick="window.location.href='./show_records'" type="button" id="add">recent records</button>
+
+
+  
+</body>
+</html>

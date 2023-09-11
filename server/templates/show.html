@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Person record</title>
+</head>
+<body>
+
+<h2>Person record</h2>
+
+  <table style=" font-family: arial, sans-serif;
+  width: 60%;
+  border: 1px solid black;
+  margin-top: 100px;
+  text-align: center;
+  padding:20px;">
+
+<tr>
+   <th>record_id</th>
+   <th>name</th>
+   <th>create_time</th>
+</tr>
+{% for i in rows %}
+<tr>
+  <td>{{ i[0] }}</td>
+  <td>{{ i[1] }}</td>
+  <td>{{ i[2] }}</td>
+
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>
